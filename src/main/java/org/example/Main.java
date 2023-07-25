@@ -20,12 +20,14 @@ public class Main {
         Reserva reserva = new Reserva();
 
         System.out.println("***Bienvenido***");
-        System.out.println("1. Recogiendo datos del usuario: ");
-        System.out.println("Ingrese el numero de documento");
+        System.out.println("1. Recogiendo datos del usuario:");
+        System.out.println("Ingrese el ID del Usuario:");
+        usuario.setId(teclado.nextInt());
+        System.out.println("Ingrese el numero de documento:");
         usuario.setDocumento(teclado.nextLine());
-        System.out.print("Digita tus nombres y apellidos: ");
+        System.out.print("Digita tus nombres y apellidos:");
         usuario.setNombres(teclado.nextLine());
-        System.out.print("Digita tu correo electronico: ");
+        System.out.print("Digita tu correo electronico:");
         usuario.setCorreoElectronico(teclado.nextLine());
         System.out.println("Ingrese la ubicacion de residencia (1-4)(zona centro, sur, norte y otras): ");
         usuario.setUbicacion(teclado.nextInt());

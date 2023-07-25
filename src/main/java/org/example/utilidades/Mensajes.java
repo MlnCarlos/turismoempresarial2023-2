@@ -6,6 +6,7 @@ public enum Mensajes {
     TAMANO_NOMBRE("El nombre debe de tener minimo 10 caracterés "),
     CORREO_INVALIDO("Correo ingresado no es valido"),
     ZONA_INVALIDA("La zona ingresada no es valida");
+
     private String mensaje;
 
     Mensajes(String mensaje) {

@@ -88,6 +88,7 @@ public class Oferta {
         }
     }
 
+
     public Double getCostoPersona() {
         return costoPersona;
     }

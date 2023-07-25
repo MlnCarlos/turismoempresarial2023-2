@@ -28,11 +28,10 @@ public class OfertaValidacion {
         }
     }
     public Boolean validarDiferenciaEntreFechas(LocalDate fechaInicio, LocalDate fechaFin)throws Exception{
-        if (fechaInicio.isBefore(fechaFin)) {
-            return true;
-        } else{
-
+        if (fechaInicio.isAfter(fechaFin)) {
             throw new Exception("La fecha de inicio no puede ser despues de la fecha fin");
+        } else{
+            return true;
         }
     }
 
