@@ -5,7 +5,8 @@ public enum Mensajes {
     NOMBRE_SOLO_LETRAS("El nombre de usuario solo debe contener letras"),
     TAMANO_NOMBRE("El nombre debe de tener minimo 10 caracterés "),
     CORREO_INVALIDO("Correo ingresado no es valido"),
-    ZONA_INVALIDA("La zona ingresada no es valida");
+    ZONA_INVALIDA("La zona ingresada no es valida"),
+    DESCUENTO("Tiene un derecho a 15% de descuento en la proxima reserva");
 
     private String mensaje;
 

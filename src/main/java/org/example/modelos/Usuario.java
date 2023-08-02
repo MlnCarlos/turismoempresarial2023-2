@@ -3,7 +3,7 @@ package org.example.modelos;
 
 import org.example.validaciones.UsuarioValidacion;
 
-public class Usuario{
+public abstract class Usuario{
 
     //ATRIBUTOS=VARIABLES=DATOS
     private Integer id;
@@ -11,6 +11,8 @@ public class Usuario{
     private String documento;
     private Integer ubicacion;
     private String correoElectronico;
+    private final Integer costoAnual = 2000000;
+    private final Double iva = 0.19;
     private UsuarioValidacion validacion = new UsuarioValidacion();
 
 
@@ -28,6 +30,14 @@ public class Usuario{
         this.documento = documento;
         this.ubicacion = ubicacion;
         this.correoElectronico = correoElectronico;
+    }
+
+    public Integer getCostoAnual() {
+        return costoAnual;
+    }
+
+    public Double getIva() {
+        return iva;
     }
 
     public Integer getId() {
@@ -100,6 +110,7 @@ public class Usuario{
     }
 
     //METODOS ORDINARIOS
+    public abstract Double calcularAnualidad();
 
 
 }
