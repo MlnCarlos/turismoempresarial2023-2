@@ -1,9 +1,11 @@
 package org.example.modelos;
 
 import com.sun.source.tree.ReturnTree;
+import org.example.interfaces.Deduccion;
+import org.example.interfaces.Reporte;
 import org.example.utilidades.MetodosPago;
 
-public class Afiliado extends Usuario{
+public class Afiliado extends Usuario implements Deduccion, Reporte {
     private Integer valorMembresia;
     private MetodosPago metodoPago;
     private String documentoReferido;
@@ -53,6 +55,26 @@ public class Afiliado extends Usuario{
         // Necesio costoAnual y resar el 20% del valor de la mensualidad
         Double calculo = this.getCostoAnual()-(this.getValorMembresia()*0.20);
         return this.getCostoAnual()-(this.getValorMembresia()*0.20);
+    }
+
+    @Override
+    public void calcularDeduccionAnualidad() {
+
+    }
+
+    @Override
+    public Double calcularDescuentoMensualidad() {
+        return null;
+    }
+
+    @Override
+    public void generarReporte() {
+
+    }
+
+    @Override
+    public void modificarReporte(Integer id) {
+
     }
 }
 
